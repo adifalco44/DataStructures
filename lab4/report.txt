@@ -1,0 +1,33 @@
+     From the users perspective, the program first welcomes them. Then,
+it tells the user to name their file 'q' if they wish to quit. If the user
+types in an invalid file, the program prompts an error message, and asks for
+another file. When the user types in a valid filename, the program prints
+the board, and then the solutiion. Then, it asks for another file.
+    Internally, the program is a bit complicated. It starts with a struct
+declaration of type Cell, which contains a value and a vector of possible
+values. In the main, the program starts by accessing a setValue function, 
+which puts the values given by the file into the 9x9 array of cells that 
+constitutes the board. After this, the program enters a while loop, which
+calls sudoku.solve() and sudoku.findPoss() until sudoku.isSolved() returns
+true (i.e. the board gets fully filled). The findPoss function relies on four
+helper functions, checkNei, checkVert, fixPoss, and checkHoriz. These functions
+return values that don't occur within their respective areas, and then fixPoss
+returns a vector of values that only occur in all three vectors. This new
+vector is then pushed back into the cell if it's value is equal to zero. Then,
+the main enters thesolve function. The solve function first iterates through
+every element of the board using the single elimination algorithm, which
+sets the value of a cell to it's first possVals element if it is the only 
+element in the vector. Then it iterates through every empty element again
+using the singlton algorithm, which is a little more complicated. The 
+singleton algorithm depends on three helper functions: hPossVals, nPossVals,
+and vPossVals. These functions return numbeers that exist within their 
+respective areas possVals vectors. Then, the singleton function iterates
+through every element in the possVals of the given cell. If said cell
+has an element that exists within its possible values but not its neighbors,
+verticals, or horizontals, it is pushed into a vector. If the vector size is
+one, then the value is set to the cells value. After the board is solved, 
+the program calls the print function, and then loops through the whole 
+process again.
+   I verified the program by ensuring all values on the board were valid
+after solving, and then using invalid filenames. Through every test, both 
+worked as expected.  

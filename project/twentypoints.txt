@@ -1,0 +1,10 @@
+    I referenced the capabilities of our webpage in my report, but I
+will reiterate them. My executable, test_output.py, creates a unique 
+static webpage that is generated using strings from standard input. This
+means that when the rest of our programs are functioning, this program 
+will be able to crete a webpage directly from their ouput. I have learned 
+how to format styles in HTML, hyperlink other websites, and create
+temporary webpages using Python. I think the executable is enough to 
+secure me the final twenty points, because it is nearly finished -- in the
+sense that I wont have to change much before reimplemeneting it for final
+submission.

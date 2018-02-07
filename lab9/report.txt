@@ -1,0 +1,16 @@
+    From the users perspective, this program takes in a 
+graph's parent nodeswith resepct to their children, and then 
+helps the user determine if there is a path from said node to another.
+
+    From the programmers perspective, this program utilizes an
+overarching while loop, multiple small helper functions, and STL
+vectors in order to determine if there is a path from a parent node
+ to a specified child. 
+
+    In order to test for errors, I simply input from the input file 
+and compared to the given outut file. Overall, the program works, but 
+the make-test command stalls for quite some time. I believe that my
+update function overloads when more than two graphs are represented,
+which is an obvious issue.
+
+    I used a deviation of the breadth first search algorithm.

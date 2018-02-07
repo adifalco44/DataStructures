@@ -1,0 +1,7 @@
+Total Points: 40
+
+Python to HTML Tutorial Evidence: 10 pts
+
+Ouput Executable: 20 pts
+
+Reflection: 10 pts

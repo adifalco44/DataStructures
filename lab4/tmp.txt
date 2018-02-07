@@ -1,0 +1,60 @@
+       bool flag = true;
+       int tmp1 [9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+       int tmp2 [9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+       int tmp3 [9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+       vector <int> nposs = nPossVals(i,j);
+       vector <int> hposs = hPossVals(i,j);
+       vector <int> vposs = vPossVals(i,j);
+//       cout << "using singlton" << endl;
+       for (auto it1 = array[i][j].possVals.begin(); it
+
+
+       // Sets Value if it Exists in Poss & not Neighborhood
+       if (array[i][j].value == 0){
+          for (auto it = nposs.begin(); it != nposs.end(); it++){
+            for (int a = 0; a < 9; a++){
+                 if (*it == tmp1[a]){
+                    tmp1[a] = 0;
+                 }
+             }
+          }
+          for (auto it1 = array[i][j].possVals.begin(); it1 != array[i][j].possVals.end(); it1++){
+             for (int b = 0; b < 9; b++){
+                 if (tmp1[b] == *it1 && tmp1[b] != 0 && checkN(i,j,*it1) && checkV(i,j,*it1) && checkH(i,j,*it1)){
+                    nposs2.push_back(*it1);
+                 }              
+             }
+          }      
+       }
+       if (array[i][j].value == 0){
+          for (auto it2 = hposs.begin(); it2 != hposs.end(); it2++){
+             for (int c = 0; c < 9; c++){
+                 if (*it2 == tmp1[c]){
+                    tmp2[c] = 0;
+                 }
+             }
+          }
+          for (auto it3 = array[i][j].possVals.begin(); it3 != array[i][j].possVals.end(); it3++){
+             for (int d = 0; d < 9; d++){
+                 if (tmp2[d] == *it3 && tmp2[d] != 0 && checkN(i,j,*it3) && checkV(i,j,*it3) && checkH(i,j,*it3)){
+                    hposs2.push_back(*it3);
+                 }              
+             }
+         }      
+       }
+       if (array[i][j].value == 0){
+         for (auto it4 = vposs.begin(); it4 != vposs.end(); it4++){
+            for (int e = 0; e < 9; e++){
+                 if (*it4 == tmp3[e]){
+                    tmp3[e] = 0;
+                 }
+             }
+          }
+          for (auto it5 = array[i][j].possVals.begin(); it5 != array[i][j].possVals.end(); it5++){
+             for (int f = 0; f < 9; f++){
+                 if (tmp3[f] == *it5 && tmp3[f] != 0 && checkN(i,j,*it5) && checkV(i,j,*it5) && checkH(i,j,*it5)){
+                    vposs2.push_back(*it5);
+                 }              
+             }
+         }      
+       }

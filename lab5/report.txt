@@ -1,0 +1,10 @@
+    I represented my binary trees using a vector. Upon recieving input, the
+program enters a while loop that ends after the specified length of the
+tree is met. Through each iteration, the value present is pushed back
+into the tree vector. After the last element is added, the checkTree
+function is called. It starts with the declaration of a boolean flag as true.
+Then, it iterates through all elements in the vector. If the child nodes are
+within the bounds of the vector, they are checked. If the left child
+is greater than the parent, the flag is set to false. If the right tree is
+less than or equal to the parent node, the flag is set to false. The flag is
+returned in the main function, and used to print the results.

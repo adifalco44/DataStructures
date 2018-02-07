@@ -1,0 +1,16 @@
+    The code that I wrote generates a static HTML page with
+standrd HTML capabilities. The program asks the user for preffered
+foods, and then the program uing string formatting to create a personlized
+webpage for every use. This program will take in data from standard 
+input when the rest of the application is finished, but for now
+this model shows the versatility of the code tht I wrote. 
+
+    I spent about two hours researching vrious methods of creating 
+HTML pages from python and C++, and decided not to use templating 
+methods. Rather, I dedicated two more hours to learning a basic method
+of creating HTML directly from python using the webbrowser library. Then,
+I spent about three hours learning the basics of HTML. I figured out how
+to declare styles and hyperlink other webpages, which I feel shows that
+our template output file is already close to completion. 
+
+

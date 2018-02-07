@@ -1,0 +1,18 @@
+   From the users perspective, this program is a simple additive calculator.
+The used can feed a file into the program, and then it will add integers 
+listed two at a time. This utility is special because it remains precise
+past the boundaries given by double long addition and float addition.
+   From the programmers perspective, this program is a relatively *simple
+linked list. It utilizes nodes connected through memory to create
+a data structure that contains integer values. These nodes are accessed 
+through several functions to perform simple addition along each
+place-value of a given integer. My main program reads in two strings at a 
+time using string stream. These strings are then spliced by digit, and
+then are transformed into integer values -- these values are stored in the T
+data of a created node. After these lists are created, a listname.addNumberist(list2)
+function is called that computes totals by considering carry's along with sums.
+   To test my program, I ran the executable with input and then tried to run it with 
+the makefile. When I ran it with manual input, the program worked fine. Sometimes,
+however, the program seg faulted if strings with varying size were used. Also
+the solution program did not work on my home machine, and I did not have
+time to access the machines. Overall, the program is functional. 

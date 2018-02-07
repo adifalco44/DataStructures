@@ -1,0 +1,15 @@
+   From the users perspective, the blackjack program is fairly simple to use.
+If the player wishes tto hit, he is to prss 0. If he wishes to stay, he 
+is to  press 1. Eventually, the game stops when a winner is found.
+Then, the user is asked whether they want to keep playing or not.
+   From the programmers perspective, the blackjack game is designed using 
+a class with several helper functions that assist larger functions
+in their efforts. For instance, I designed a getHand and SetHand to 
+help when a new dek is shuffled, since the hands dealt are private data
+in my class.
+   To verify this program, I ran it several times and looked for errors.
+I realized after the weekend that 0 cards and 11 cards arent actual values, 
+so i went into the program and modified it slightly. After the modifications,
+my program encounters several problems at random. I don't know how to fix
+them at this point, and the deadline is encroaching, so I can't "verify"
+what I know is clearly wrong.

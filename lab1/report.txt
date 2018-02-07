@@ -1,0 +1,26 @@
+	 I wrote a program the models a simple Connect Four game using
+a self defined class. This class utilizes inherticance, and spans two 
+declaration files, two implementation files, and a main driver program.
+	From the user's perspective, this program plays like a normal connect
+four game. The user is asked whether to play in partner mode or in computer 
+mode, where a simple AI places pieces randomly on the board. When a winning line
+is found, the game ends and the program terminates.
+	From the programmer's perspective, there are two main objects utilized
+in this program. The first is a column class, which comprises the vertical 
+columns in the connect four board. this class is relatively simple and
+has very few functions. The board class inhertis these columns, and puts
+them into an array. These arrays form the board, and the functions within
+the larger class utilize helper functions from the column class in order to
+print the board, find a winner, place pieces, and place computer moves.
+I used a nested for loop and three if-statements to find a winner if there is 
+one.
+	When you dynaically allocate memory, you request the system
+for extra space in memory to store variables across programs. When
+a program terminates after dynamic memory is allocated, those
+variables stay static in the system -- not allowing that same memory space
+to be assigned if the program were to be run twice. This is why
+deconstructors are necessary.
+
+
+
+-- Anthony Di Falco	

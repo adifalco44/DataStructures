@@ -1,0 +1,40 @@
+bst.cpp
+constants.cpp
+Makefile
+map_bench.cpp
+map.h
+map_test.cpp
+rbtree.cpp
+report.txt
+sorted.cpp
+treap.cpp
+unsorted.cpp
+
+Relations
+=========
+
+1. The treap file includes the map.h base type file, and 
+that is because it shares certain data members. The same
+goes for rbtree.cpp, bst.cpp and unsorted.cpp. All of these
+files are differet back end implenentations of the front 
+end program map, which sorts and stores data. Map ties
+these data members together in order to test them parallelly.
+
+2. My treap implementation first defines insert, whih recursively sets
+the root of the tree based on the value to be updated. The recursive insert 
+either inserts in the left, right, or root node depending on the children
+values. If the right node is appended, it is inserted, and the existing
+child is rotated apporpriately. The same goes for the left. Search recursively 
+calls the recursive search until the object is found. This function either returns
+the root if it is the value, or shifts down to the children. If the key is less than
+the given node, it recursively searches the left side; the same goes for the right.
+getMin and getMax also call their recursive helpers until their heights are found.
+getMin calls itself on the right and left children until a base leaf is found, and then
+it returnsa count; the max does the same but it waits for the longest path to be found.  
+Traversal also relies on helpers to complete its job. This spits out the root, then recursively
+cals itself on the left tree, and then the right tree. A helper getRadom function 
+spits out a radom integer, which is used to probablistically balance the treap.   
+
+3. As of now, I could not run my tests. It ran on the student machines last monday, when
+I finished, but now its saying the -std=gnu++11 flag isnt a flag.  This is clearly an
+issue out my scope that I will try to fix, but I have other commitments at the moment. 
